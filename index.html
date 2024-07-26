@@ -10,7 +10,7 @@
             --box-width: 400px;
             --box-height: 100px;
             --font-type: Arial, sans-serif;
-            --text-color: #000000;
+            --text-color: blue;
         }
 
         body, html {
@@ -18,7 +18,7 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             background-color: #f5f5f5;
         }
 
@@ -28,6 +28,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 20%; /* Move the text up */
             font-size: var(--font-size);
             font-family: var(--font-type);
             color: var(--text-color);
@@ -36,14 +37,16 @@
         }
 
         .text-box a {
-            text-decoration: none;
-            color: inherit;
+            text-decoration: underline;
+            color: var(--text-color);
         }
     </style>
 </head>
 <body>
     <div class="text-box">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX6Tdlj-BQa7ga0TZbx9td_oiiYg7lcnP1QCUf8oo54YfNug/viewform?usp=sf_link" target="_blank">Punjabi Class Registration Form</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX6Tdlj-BQa7ga0TZbx9td_oiiYg7lcnP1QCUf8oo54YfNug/viewform?usp=sf_link" target="_blank">
+            Click Here to Access the Punjabi Class Registration Form
+        </a>
     </div>
 </body>
 </html>
