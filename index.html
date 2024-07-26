@@ -7,8 +7,7 @@
     <style>
         :root {
             --font-size: 24px;
-            --box-width: 600px; /* Increased the width to fit the text */
-            --box-height: 100px;
+            --box-width: 600px;
             --font-type: Arial, sans-serif;
             --text-color: blue;
         }
@@ -17,29 +16,36 @@
             height: 100%;
             margin: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             background-color: #f5f5f5;
         }
 
         .text-box {
             width: var(--box-width);
-            height: var(--box-height);
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 20%; /* Move the text up */
-            font-size: var(--font-size);
+            margin-top: 10%;
             font-family: var(--font-type);
-            color: var(--text-color);
             text-align: center;
-            border: none;
         }
 
         .text-box a {
+            font-size: var(--font-size);
             text-decoration: underline;
             color: var(--text-color);
-            white-space: nowrap; /* Prevent text from wrapping */
+            white-space: nowrap;
+        }
+
+        .additional-info {
+            font-size: 16px;
+            color: #000000;
+            margin-top: 20px;
+            max-width: var(--box-width);
+            text-align: center;
         }
     </style>
 </head>
@@ -48,6 +54,9 @@
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX6Tdlj-BQa7ga0TZbx9td_oiiYg7lcnP1QCUf8oo54YfNug/viewform?usp=sf_link" target="_blank">
             Click Here to Access the Punjabi Class Registration Form
         </a>
+        <div class="additional-info">
+            Please use this form to register for 2024-2025 Punjabi Class. Annual tuition is $150 for each student; $100 siblings. Please make checks payable to CSMA; Please write Student Name in Memo Line of check.
+        </div>
     </div>
 </body>
 </html>
