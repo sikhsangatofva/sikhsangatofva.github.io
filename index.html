@@ -8,7 +8,7 @@
         :root {
             --font-size: 36px; /* Font size for the link text */
             --info-font-size: 24px; /* Font size for the additional information text */
-            --box-width: 600px;
+            --box-width: 600px; /* Width for both the link and the additional info */
             --font-type: Arial, sans-serif;
             --text-color: blue;
         }
@@ -18,7 +18,7 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center; /* Center content vertically */
             align-items: center;
             background-color: #f5f5f5;
         }
@@ -27,9 +27,8 @@
             width: var(--box-width);
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            margin-top: 50px; /* Move the text down */
+            margin-top: 30px; /* Move the text box down */
             font-family: var(--font-type);
             text-align: center;
         }
@@ -39,13 +38,14 @@
             text-decoration: underline;
             color: var(--text-color);
             white-space: nowrap;
+            display: block; /* Ensure link is treated as a block for width */
         }
 
         .additional-info {
-            width: var(--box-width);
+            width: var(--box-width); /* Ensure the additional-info matches the link box width */
             font-size: var(--info-font-size);
             color: #000000;
-            margin-top: 20px;
+            margin-top: 20px; /* Space between the link and the additional information */
             text-align: center;
         }
     </style>
