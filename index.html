@@ -3,86 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10 Equally Spaced Text Areas</title>
+    <title>10 Customizable Text Areas</title>
     <style>
         :root {
-            /* Distance between boxes 1 and 2 */
+            /* Box 1 */
+            --width-1: 200px;
+            --height-1: 100px;
             --gap-1-2: 20px;
-            /* Distance between boxes 2 and 3 */
+
+            /* Box 2 */
+            --width-2: 200px;
+            --height-2: 100px;
             --gap-2-3: 20px;
-            /* Distance between boxes 3 and 4 */
+
+            /* Box 3 */
+            --width-3: 200px;
+            --height-3: 100px;
             --gap-3-4: 20px;
-            /* Distance between boxes 4 and 5 */
+
+            /* Box 4 */
+            --width-4: 200px;
+            --height-4: 100px;
             --gap-4-5: 20px;
-            /* Distance between boxes 5 and 6 */
+
+            /* Box 5 */
+            --width-5: 200px;
+            --height-5: 100px;
             --gap-5-6: 20px;
-            /* Distance between boxes 6 and 7 */
+
+            /* Box 6 */
+            --width-6: 200px;
+            --height-6: 100px;
             --gap-6-7: 20px;
-            /* Distance between boxes 7 and 8 */
+
+            /* Box 7 */
+            --width-7: 200px;
+            --height-7: 100px;
             --gap-7-8: 20px;
-            /* Distance between boxes 8 and 9 */
+
+            /* Box 8 */
+            --width-8: 200px;
+            --height-8: 100px;
             --gap-8-9: 20px;
-            /* Distance between boxes 9 and 10 */
+
+            /* Box 9 */
+            --width-9: 200px;
+            --height-9: 100px;
             --gap-9-10: 20px;
+
+            /* Box 10 */
+            --width-10: 200px;
+            --height-10: 100px;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
 
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
+            max-width: 600px;
         }
 
         textarea {
-            width: 200px;
-            height: 100px;
-            margin-bottom: var(--gap-1-2);
+            resize: none;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
         }
 
-        textarea:nth-child(2) {
-            margin-bottom: var(--gap-2-3);
-        }
-
-        textarea:nth-child(3) {
-            margin-bottom: var(--gap-3-4);
-        }
-
-        textarea:nth-child(4) {
-            margin-bottom: var(--gap-4-5);
-        }
-
-        textarea:nth-child(5) {
-            margin-bottom: var(--gap-5-6);
-        }
-
-        textarea:nth-child(6) {
-            margin-bottom: var(--gap-6-7);
-        }
-
-        textarea:nth-child(7) {
-            margin-bottom: var(--gap-7-8);
-        }
-
-        textarea:nth-child(8) {
-            margin-bottom: var(--gap-8-9);
-        }
-
-        textarea:nth-child(9) {
-            margin-bottom: var(--gap-9-10);
-        }
+        textarea:nth-child(1) { width: var(--width-1); height: var(--height-1); margin-bottom: var(--gap-1-2); }
+        textarea:nth-child(2) { width: var(--width-2); height: var(--height-2); margin-bottom: var(--gap-2-3); }
+        textarea:nth-child(3) { width: var(--width-3); height: var(--height-3); margin-bottom: var(--gap-3-4); }
+        textarea:nth-child(4) { width: var(--width-4); height: var(--height-4); margin-bottom: var(--gap-4-5); }
+        textarea:nth-child(5) { width: var(--width-5); height: var(--height-5); margin-bottom: var(--gap-5-6); }
+        textarea:nth-child(6) { width: var(--width-6); height: var(--height-6); margin-bottom: var(--gap-6-7); }
+        textarea:nth-child(7) { width: var(--width-7); height: var(--height-7); margin-bottom: var(--gap-7-8); }
+        textarea:nth-child(8) { width: var(--width-8); height: var(--height-8); margin-bottom: var(--gap-8-9); }
+        textarea:nth-child(9) { width: var(--width-9); height: var(--height-9); margin-bottom: var(--gap-9-10); }
+        textarea:nth-child(10) { width: var(--width-10); height: var(--height-10); }
     </style>
 </head>
 <body>
     <div class="container">
-        <textarea></textarea>
-        <textarea></textarea>
-        <textarea></textarea>
-        <textarea></textarea>
-        <textarea></textarea>
-        <textarea></textarea>
-        <textarea></textarea>
-        <textarea></textarea>
-        <textarea></textarea>
-        <textarea></textarea>
+        <textarea readonly>Text area 1</textarea>
+        <textarea readonly>Text area 2</textarea>
+        <textarea readonly>Text area 3</textarea>
+        <textarea readonly>Text area 4</textarea>
+        <textarea readonly>Text area 5</textarea>
+        <textarea readonly>Text area 6</textarea>
+        <textarea readonly>Text area 7</textarea>
+        <textarea readonly>Text area 8</textarea>
+        <textarea readonly>Text area 9</textarea>
+        <textarea readonly>Text area 10</textarea>
     </div>
 </body>
 </html>
