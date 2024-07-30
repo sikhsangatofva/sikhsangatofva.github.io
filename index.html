@@ -12,17 +12,17 @@
             --button-border-color: #007BFF; /* Border color for the buttons */
             --button-hover-bg-color: #0056b3; /* Hover background color for the buttons */
             --font-type: Arial, sans-serif; /* Font type for the text */
-            --font-size: 24px; /* Font size for the buttons */
-            --info-font-size: 24px; /* Font size for the additional information text */
-            --heading-font-size: 32px; /* Font size for section headings */
+            --font-size: 32px; /* Font size for the buttons */
+            --info-font-size: 32px; /* Font size for the additional information text */
+            --heading-font-size: 40px; /* Font size for section headings */
             --box-width: 600px; /* Width for the text boxes */
             --box-height: auto; /* Height for the text boxes */
             --text-color: blue; /* Color for the sign-up page link text */
             --description-color: black; /* Color for the description text */
             --description-margin-top: 20px; /* Margin top for the description text */
-            --banner-height: 80px; /* Height for the banner */
-            --button-padding: 10px 20px; /* Padding for the buttons */
-            --section-gap: 100px; /* Reduced gap between sections */
+            --banner-height: 104px; /* Height for the banner */
+            --button-padding: 13px 26px; /* Padding for the buttons */
+            --section-gap: 300px; /* Reduced gap between sections */
             --padding-top: 20px; /* Padding between the hyperlink and the banner */
             --title-margin-top: 20px; /* Margin top for section titles */
         }
@@ -67,12 +67,12 @@
         }
 
         .section {
-            padding: 0 20px; /* Padding around sections */
+            padding: 20px 20px 0 20px; /* Padding around sections */
             display: flex; /* Flexbox for alignment */
             flex-direction: column; /* Stack items vertically */
             align-items: center; /* Center items horizontally */
             text-align: center; /* Center text inside sections */
-            margin-top: var(--banner-height); /* Space from the banner */
+            margin-top: calc(var(--banner-height) + var(--section-gap)); /* Space from the banner */
         }
 
         .text-box {
@@ -150,5 +150,19 @@
         <h2>Homework</h2>
         <p>Information regarding homework assignments will be provided here.</p>
     </div>
+
+    <script>
+        document.querySelectorAll('.banner a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - parseInt(getComputedStyle(document.documentElement).getPropertyValue('--banner-height')),
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
