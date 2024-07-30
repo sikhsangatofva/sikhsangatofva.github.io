@@ -23,6 +23,7 @@
             --banner-height: 80px; /* Height for the banner */
             --button-padding: 10px 20px; /* Padding for the buttons */
             --section-gap: 100px; /* Reduced gap between sections */
+            --padding-top: 20px; /* Padding between the hyperlink and the banner */
         }
 
         body, html {
@@ -73,15 +74,6 @@
             margin-top: var(--banner-height); /* Ensure the section starts below the banner */
         }
 
-        .section h2 {
-            font-size: var(--heading-font-size); /* Font size for section headings */
-            margin: 0 0 10px 0; /* Margin below the heading */
-        }
-
-        .section p {
-            font-size: var(--info-font-size); /* Font size for the content text */
-        }
-
         .text-box {
             width: var(--box-width);
             height: var(--box-height); /* Adjust height based on the variable */
@@ -91,6 +83,7 @@
             align-items: center;
             font-family: var(--font-type);
             text-align: center;
+            padding-top: var(--padding-top); /* Padding between the hyperlink and the banner */
         }
 
         .text-box a {
@@ -107,6 +100,15 @@
             margin-top: var(--description-margin-top); /* Use variable for margin top */
             text-align: center;
         }
+
+        .section h2 {
+            font-size: var(--heading-font-size); /* Font size for section headings */
+            margin: 0 0 10px 0; /* Margin below the heading */
+        }
+
+        .section p {
+            font-size: var(--info-font-size); /* Font size for the content text */
+        }
     </style>
 </head>
 <body>
@@ -120,30 +122,4 @@
 
     <!-- Sections corresponding to the banner buttons -->
     <div id="sign-up-page" class="section">
-        <h2>Sign Up Page</h2>
-        <div class="text-box">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX6Tdlj-BQa7ga0TZbx9td_oiiYg7lcnP1QCUf8oo54YfNug/viewform?usp=sf_link" target="_blank">
-                Click Here to Access the Punjabi Class Registration Form
-            </a>
-            <div class="additional-info">
-                Please use this form to register for 2024-2025 Punjabi Class. Annual tuition is $150 for each student; $100 siblings. Please make checks payable to CSMA; Please write Student Name in Memo Line of check.
-            </div>
-        </div>
-    </div>
-
-    <div id="information" class="section">
-        <h2>Information</h2>
-        <p>Here you can include additional information about the class, registration process, or any other relevant details.</p>
-    </div>
-
-    <div id="class-schedule" class="section">
-        <h2>Class Schedule</h2>
-        <p>Details about the class schedule will be available here.</p>
-    </div>
-
-    <div id="homework" class="section">
-        <h2>Homework</h2>
-        <p>Information regarding homework assignments will be provided here.</p>
-    </div>
-</body>
-</html>
+        <h2>Sign Up Page
