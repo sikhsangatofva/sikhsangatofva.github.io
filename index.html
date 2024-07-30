@@ -8,9 +8,12 @@
         :root {
             --font-size: 36px; /* Font size for the link text */
             --info-font-size: 24px; /* Font size for the additional information text */
-            --box-width: 600px;
+            --box-width: 600px; /* Width for the text boxes */
+            --box-height: auto; /* Height for the text boxes, adjustable */
             --font-type: Arial, sans-serif;
             --text-color: blue;
+            --description-color: black; /* Color for the description text */
+            --description-margin-top: 20px; /* Margin top for the description text */
         }
 
         body, html {
@@ -25,11 +28,12 @@
 
         .text-box {
             width: var(--box-width);
+            height: var(--box-height); /* Adjust height based on the variable */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 5%; /* Move the text up */
+            margin-top: 5%; /* Move the text box up */
             font-family: var(--font-type);
             text-align: center;
         }
@@ -43,8 +47,8 @@
 
         .additional-info {
             font-size: var(--info-font-size);
-            color: #000000;
-            margin-top: 20px;
+            color: var(--description-color); /* Use variable for description color */
+            margin-top: var(--description-margin-top); /* Use variable for margin top */
             max-width: var(--box-width);
             text-align: center;
         }
