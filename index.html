@@ -12,30 +12,35 @@
             --button-border-color: #007BFF; /* Border color for the buttons */
             --button-hover-bg-color: #0056b3; /* Hover background color for the buttons */
             --font-type: Arial, sans-serif;
-            --font-size: 16px; /* Font size for the buttons */
-            --info-font-size: 24px; /* Font size for the additional information text */
+            --font-size: 24px; /* Font size for the buttons (increased by 8px from the default 16px) */
+            --info-font-size: 32px; /* Font size for the additional information text (increased by 8px from the default 24px) */
             --box-width: 600px; /* Width for the text boxes */
             --box-height: auto; /* Height for the text boxes, adjustable */
             --text-color: blue;
             --description-color: black; /* Color for the description text */
             --description-margin-top: 20px; /* Margin top for the description text */
+            --banner-height: 60px; /* Banner height (30% increase from default 40px) */
+            --button-padding: 15px 25px; /* Increased padding for the buttons */
         }
 
         body, html {
             margin: 0;
             padding: 0;
             font-family: var(--font-type);
+            height: 100%;
         }
 
         .banner {
             background-color: var(--banner-color); /* Banner background color */
             padding: 10px;
+            height: var(--banner-height); /* Height for the banner */
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000; /* Ensure the banner is on top of other content */
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
         .banner a {
@@ -43,10 +48,10 @@
             color: var(--button-text-color);
             border: 1px solid var(--button-border-color);
             border-radius: 5px;
-            padding: 10px 20px;
+            padding: var(--button-padding); /* Increased padding for the buttons */
             margin: 0 10px;
             text-decoration: none;
-            font-size: var(--font-size);
+            font-size: var(--font-size); /* Font size for the banner buttons */
             text-align: center;
         }
 
@@ -55,8 +60,12 @@
         }
 
         .section {
-            padding: 60px 20px; /* Space for banner and padding */
+            padding: 80px 20px 20px; /* Space for banner and padding */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            min-height: 100vh; /* Ensure the section takes at least the full viewport height */
         }
 
         .text-box {
@@ -66,13 +75,12 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 5%; /* Move the text box up */
             font-family: var(--font-type);
             text-align: center;
         }
 
         .text-box a {
-            font-size: 36px;
+            font-size: 36px; /* Font size for the sign up page link */
             text-decoration: underline;
             color: var(--text-color);
             white-space: nowrap;
@@ -80,10 +88,14 @@
 
         .additional-info {
             width: var(--box-width); /* Set width to match the box width */
-            font-size: var(--info-font-size);
+            font-size: var(--info-font-size); /* Font size for the additional info text */
             color: var(--description-color); /* Use variable for description color */
             margin-top: var(--description-margin-top); /* Use variable for margin top */
             text-align: center;
+        }
+
+        .section h2, .section p {
+            font-size: 32px; /* Font size for the headers and paragraphs in other sections (increased by 8px) */
         }
     </style>
 </head>
