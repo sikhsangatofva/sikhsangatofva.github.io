@@ -11,114 +11,116 @@
             --button-text-color: #ffffff; /* Text color for the buttons */
             --button-border-color: #007BFF; /* Border color for the buttons */
             --button-hover-bg-color: #0056b3; /* Hover background color for the buttons */
-            --font-type: Arial, sans-serif;
+            --font-type: Arial, sans-serif; /* Font type for the text */
             --font-size: 24px; /* Font size for the buttons */
             --info-font-size: 24px; /* Font size for the additional information text */
             --heading-font-size: 32px; /* Font size for section headings */
             --box-width: 600px; /* Width for the text boxes */
             --box-height: auto; /* Height for the text boxes */
-            --text-color: blue;
+            --text-color: blue; /* Color for the sign-up page link text */
             --description-color: black; /* Color for the description text */
             --description-margin-top: 20px; /* Margin top for the description text */
             --banner-height: 80px; /* Height for the banner */
             --button-padding: 10px 20px; /* Padding for the buttons */
             --section-gap: 100px; /* Reduced gap between sections */
+            --padding-top: 20px; /* Padding between the hyperlink and the banner */
+            --title-margin-top: 20px; /* Margin top for section titles */
         }
 
         body, html {
-            margin: 0;
-            padding: 0;
-            font-family: var(--font-type);
-            height: 100%;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: var(--font-type); /* Apply font type */
+            height: 100%; /* Full height for body and html */
             scroll-behavior: smooth; /* Smooth scrolling for anchor links */
         }
 
         .banner {
             background-color: var(--banner-color); /* Banner background color */
             height: var(--banner-height); /* Height for the banner */
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
+            position: fixed; /* Fixed positioning to keep it at the top */
+            width: 100%; /* Full width of the viewport */
+            top: 0; /* Position at the top */
+            left: 0; /* Align to the left edge */
             z-index: 1000; /* Ensure the banner is on top of other content */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex; /* Flexbox for alignment */
+            justify-content: center; /* Center buttons horizontally */
+            align-items: center; /* Center buttons vertically */
             padding: 0 10px; /* Padding for better alignment */
             box-sizing: border-box; /* Include padding in width calculation */
         }
 
         .banner a {
-            background-color: var(--button-bg-color);
-            color: var(--button-text-color);
-            border: 1px solid var(--button-border-color);
-            border-radius: 5px;
-            padding: var(--button-padding); /* Padding for the buttons */
-            margin: 0 5px; /* Reduced margin between buttons */
-            text-decoration: none;
-            font-size: var(--font-size); /* Font size for the banner buttons */
-            text-align: center;
+            background-color: var(--button-bg-color); /* Background color for buttons */
+            color: var(--button-text-color); /* Text color for buttons */
+            border: 1px solid var(--button-border-color); /* Border color for buttons */
+            border-radius: 5px; /* Rounded corners */
+            padding: var(--button-padding); /* Padding inside buttons */
+            margin: 0 5px; /* Space between buttons */
+            text-decoration: none; /* Remove underline from links */
+            font-size: var(--font-size); /* Font size for button text */
+            text-align: center; /* Center text inside buttons */
         }
 
         .banner a:hover {
-            background-color: var(--button-hover-bg-color);
+            background-color: var(--button-hover-bg-color); /* Change background color on hover */
         }
 
         .section {
-            padding: 0 20px; /* Removed top and bottom padding */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-top: var(--banner-height); /* Ensure the section starts below the banner */
+            padding: 0 20px; /* Padding around sections */
+            display: flex; /* Flexbox for alignment */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center text inside sections */
+            margin-top: var(--banner-height); /* Space from the banner */
+        }
+
+        .text-box {
+            width: var(--box-width); /* Width of the text box */
+            height: var(--box-height); /* Height of the text box */
+            display: flex; /* Flexbox for alignment */
+            flex-direction: column; /* Stack items vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            font-family: var(--font-type); /* Apply font type */
+            text-align: center; /* Center text inside text box */
+            padding-top: var(--padding-top); /* Padding between the hyperlink and the banner */
+        }
+
+        .text-box a {
+            font-size: 36px; /* Font size for the hyperlink text */
+            text-decoration: underline; /* Underline the hyperlink */
+            color: var(--text-color); /* Text color for the hyperlink */
+            white-space: nowrap; /* Prevent text from wrapping to the next line */
+        }
+
+        .additional-info {
+            width: var(--box-width); /* Set width to match the text box */
+            font-size: var(--info-font-size); /* Font size for additional info text */
+            color: var(--description-color); /* Color for additional info text */
+            margin-top: var(--description-margin-top); /* Margin top for additional info text */
+            text-align: center; /* Center text inside the additional info box */
         }
 
         .section h2 {
             font-size: var(--heading-font-size); /* Font size for section headings */
-            margin: 0 0 10px 0; /* Margin below the heading */
+            margin: var(--title-margin-top) 0 10px 0; /* Margin above and below heading */
         }
 
         .section p {
-            font-size: var(--info-font-size); /* Font size for the content text */
-        }
-
-        .text-box {
-            width: var(--box-width);
-            height: var(--box-height); /* Adjust height based on the variable */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-family: var(--font-type);
-            text-align: center;
-        }
-
-        .text-box a {
-            font-size: 36px; /* Font size for the sign up page link */
-            text-decoration: underline;
-            color: var(--text-color);
-            white-space: nowrap;
-        }
-
-        .additional-info {
-            width: var(--box-width); /* Set width to match the box width */
-            font-size: var(--info-font-size); /* Font size for the additional info text */
-            color: var(--description-color); /* Use variable for description color */
-            margin-top: var(--description-margin-top); /* Use variable for margin top */
-            text-align: center;
+            font-size: var(--info-font-size); /* Font size for content text */
         }
     </style>
 </head>
 <body>
     <div class="banner">
-        <!-- Banner Buttons -->
         <a href="#sign-up-page">Sign up page</a>
         <a href="#information">Information</a>
         <a href="#class-schedule">Class Schedule</a>
         <a href="#homework">Homework</a>
     </div>
 
-    <!-- Sections corresponding to the banner buttons -->
+    <!-- Section for the sign-up page content -->
     <div id="sign-up-page" class="section">
         <h2>Sign Up Page</h2>
         <div class="text-box">
@@ -131,16 +133,19 @@
         </div>
     </div>
 
+    <!-- Section for information -->
     <div id="information" class="section">
         <h2>Information</h2>
         <p>Here you can include additional information about the class, registration process, or any other relevant details.</p>
     </div>
 
+    <!-- Section for class schedule -->
     <div id="class-schedule" class="section">
         <h2>Class Schedule</h2>
         <p>Details about the class schedule will be available here.</p>
     </div>
 
+    <!-- Section for homework -->
     <div id="homework" class="section">
         <h2>Homework</h2>
         <p>Information regarding homework assignments will be provided here.</p>
