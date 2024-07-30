@@ -13,7 +13,8 @@
             --button-hover-bg-color: #0056b3; /* Hover background color for the buttons */
             --font-type: Arial, sans-serif;
             --font-size: 24px; /* Font size for the buttons */
-            --info-font-size: 32px; /* Font size for the additional information text */
+            --info-font-size: 24px; /* Font size for the additional information text */
+            --heading-font-size: 40px; /* Font size for section headings */
             --box-width: 600px; /* Width for the text boxes */
             --box-height: auto; /* Height for the text boxes */
             --text-color: blue;
@@ -65,10 +66,19 @@
         .section {
             padding: var(--section-gap) 20px 20px; /* Space for banner and padding */
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             text-align: center;
             min-height: calc(100vh - var(--banner-height)); /* Ensure the section takes at least the full viewport height minus the banner height */
+        }
+
+        .section h2 {
+            font-size: var(--heading-font-size); /* Font size for section headings */
+            margin: 0 0 20px 0; /* Margin below the heading */
+        }
+
+        .section p {
+            font-size: var(--info-font-size); /* Font size for the content text */
         }
 
         .text-box {
@@ -96,10 +106,6 @@
             margin-top: var(--description-margin-top); /* Use variable for margin top */
             text-align: center;
         }
-
-        .section h2, .section p {
-            font-size: 32px; /* Font size for the headers and paragraphs in other sections (increased by 8px) */
-        }
     </style>
 </head>
 <body>
@@ -113,6 +119,7 @@
 
     <!-- Sections corresponding to the banner buttons -->
     <div id="sign-up-page" class="section">
+        <h2>Sign Up Page</h2>
         <div class="text-box">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX6Tdlj-BQa7ga0TZbx9td_oiiYg7lcnP1QCUf8oo54YfNug/viewform?usp=sf_link" target="_blank">
                 Click Here to Access the Punjabi Class Registration Form
