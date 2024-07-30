@@ -6,20 +6,20 @@
     <title>Punjabi Class Registration Form</title>
     <style>
         :root {
-            --banner-color: #007BFF; /* Banner background color (adjust this variable) */
+            --banner-color: #007BFF; /* Banner background color */
             --button-bg-color: #007BFF; /* Background color for the buttons */
             --button-text-color: #ffffff; /* Text color for the buttons */
             --button-border-color: #007BFF; /* Border color for the buttons */
             --button-hover-bg-color: #0056b3; /* Hover background color for the buttons */
             --font-type: Arial, sans-serif;
-            --font-size: 24px; /* Font size for the buttons (increased by 8px from the default 16px) */
-            --info-font-size: 32px; /* Font size for the additional information text (increased by 8px from the default 24px) */
+            --font-size: 24px; /* Font size for the buttons */
+            --info-font-size: 32px; /* Font size for the additional information text */
             --box-width: 600px; /* Width for the text boxes */
-            --box-height: auto; /* Height for the text boxes, adjustable */
+            --box-height: auto; /* Height for the text boxes */
             --text-color: blue;
             --description-color: black; /* Color for the description text */
             --description-margin-top: 20px; /* Margin top for the description text */
-            --banner-height: 60px; /* Banner height (30% increase from default 40px) */
+            --banner-height: 80px; /* Increased banner height */
             --button-padding: 15px 25px; /* Increased padding for the buttons */
         }
 
@@ -32,15 +32,16 @@
 
         .banner {
             background-color: var(--banner-color); /* Banner background color */
-            padding: 10px;
             height: var(--banner-height); /* Height for the banner */
             position: fixed;
             width: 100%;
             top: 0;
+            left: 0;
             z-index: 1000; /* Ensure the banner is on top of other content */
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 0 20px; /* Padding for better alignment */
         }
 
         .banner a {
@@ -60,12 +61,12 @@
         }
 
         .section {
-            padding: 80px 20px 20px; /* Space for banner and padding */
+            padding: calc(var(--banner-height) + 20px) 20px 20px; /* Space for banner and padding */
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            min-height: 100vh; /* Ensure the section takes at least the full viewport height */
+            min-height: calc(100vh - var(--banner-height)); /* Ensure the section takes at least the full viewport height minus the banner height */
         }
 
         .text-box {
