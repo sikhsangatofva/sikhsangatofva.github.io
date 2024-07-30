@@ -6,24 +6,57 @@
     <title>Punjabi Class Registration Form</title>
     <style>
         :root {
-            --font-size: 36px; /* Font size for the link text */
+            --banner-color: #007BFF; /* Banner background color (adjust this variable) */
+            --button-bg-color: #007BFF; /* Background color for the buttons */
+            --button-text-color: #ffffff; /* Text color for the buttons */
+            --button-border-color: #007BFF; /* Border color for the buttons */
+            --button-hover-bg-color: #0056b3; /* Hover background color for the buttons */
+            --font-type: Arial, sans-serif;
+            --font-size: 16px; /* Font size for the buttons */
             --info-font-size: 24px; /* Font size for the additional information text */
             --box-width: 600px; /* Width for the text boxes */
             --box-height: auto; /* Height for the text boxes, adjustable */
-            --font-type: Arial, sans-serif;
             --text-color: blue;
             --description-color: black; /* Color for the description text */
             --description-margin-top: 20px; /* Margin top for the description text */
         }
 
         body, html {
-            height: 100%;
             margin: 0;
+            padding: 0;
+            font-family: var(--font-type);
+        }
+
+        .banner {
+            background-color: var(--banner-color); /* Banner background color */
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000; /* Ensure the banner is on top of other content */
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            background-color: #f5f5f5;
+            justify-content: center;
+        }
+
+        .banner a {
+            background-color: var(--button-bg-color);
+            color: var(--button-text-color);
+            border: 1px solid var(--button-border-color);
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: var(--font-size);
+            text-align: center;
+        }
+
+        .banner a:hover {
+            background-color: var(--button-hover-bg-color);
+        }
+
+        .section {
+            padding: 60px 20px; /* Space for banner and padding */
+            text-align: center;
         }
 
         .text-box {
@@ -39,7 +72,7 @@
         }
 
         .text-box a {
-            font-size: var(--font-size);
+            font-size: 36px;
             text-decoration: underline;
             color: var(--text-color);
             white-space: nowrap;
@@ -55,13 +88,39 @@
     </style>
 </head>
 <body>
-    <div class="text-box">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX6Tdlj-BQa7ga0TZbx9td_oiiYg7lcnP1QCUf8oo54YfNug/viewform?usp=sf_link" target="_blank">
-            Click Here to Access the Punjabi Class Registration Form
-        </a>
-        <div class="additional-info">
-            Please use this form to register for 2024-2025 Punjabi Class. Annual tuition is $150 for each student; $100 siblings. Please make checks payable to CSMA; Please write Student Name in Memo Line of check.
+    <div class="banner">
+        <!-- Banner Buttons -->
+        <a href="#sign-up-page">Sign up page</a>
+        <a href="#information">Information</a>
+        <a href="#class-schedule">Class Schedule</a>
+        <a href="#homework">Homework</a>
+    </div>
+
+    <!-- Sections corresponding to the banner buttons -->
+    <div id="sign-up-page" class="section">
+        <div class="text-box">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX6Tdlj-BQa7ga0TZbx9td_oiiYg7lcnP1QCUf8oo54YfNug/viewform?usp=sf_link" target="_blank">
+                Click Here to Access the Punjabi Class Registration Form
+            </a>
+            <div class="additional-info">
+                Please use this form to register for 2024-2025 Punjabi Class. Annual tuition is $150 for each student; $100 siblings. Please make checks payable to CSMA; Please write Student Name in Memo Line of check.
+            </div>
         </div>
+    </div>
+
+    <div id="information" class="section">
+        <h2>Information</h2>
+        <p>Here you can include additional information about the class, registration process, or any other relevant details.</p>
+    </div>
+
+    <div id="class-schedule" class="section">
+        <h2>Class Schedule</h2>
+        <p>Details about the class schedule will be available here.</p>
+    </div>
+
+    <div id="homework" class="section">
+        <h2>Homework</h2>
+        <p>Information regarding homework assignments will be provided here.</p>
     </div>
 </body>
 </html>
