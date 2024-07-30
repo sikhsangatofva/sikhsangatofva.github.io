@@ -21,6 +21,7 @@
             --description-margin-top: 20px; /* Margin top for the description text */
             --banner-height: 80px; /* Increased banner height */
             --button-padding: 15px 25px; /* Increased padding for the buttons */
+            --section-gap: 300px; /* Gap between sections */
         }
 
         body, html {
@@ -28,6 +29,7 @@
             padding: 0;
             font-family: var(--font-type);
             height: 100%;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
         }
 
         .banner {
@@ -61,7 +63,7 @@
         }
 
         .section {
-            padding: calc(var(--banner-height) + 20px) 20px 20px; /* Space for banner and padding */
+            padding: var(--section-gap) 20px 20px; /* Space for banner and padding */
             display: flex;
             justify-content: center;
             align-items: center;
