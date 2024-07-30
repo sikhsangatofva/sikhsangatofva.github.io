@@ -22,7 +22,7 @@
             --description-margin-top: 20px; /* Margin top for the description text */
             --banner-height: 104px; /* Height for the banner */
             --button-padding: 10px 20px; /* Padding for the buttons */
-            --section-gap: 100px; /* Reduced gap between sections */
+            --section-gap: 300px; /* Reduced gap between sections */
             --padding-top: 20px; /* Padding between the hyperlink and the banner */
             --title-margin-top: 20px; /* Margin top for section titles */
         }
@@ -37,7 +37,7 @@
 
         .banner {
             background-color: var(--banner-color); /* Banner background color */
-            height: var(--banner-height); /* Height for the banner */
+            height: calc(var(--banner-height) * 1.3); /* Increased height for the banner */
             position: fixed; /* Fixed positioning to keep it at the top */
             width: 100%; /* Full width of the viewport */
             top: 0; /* Position at the top */
@@ -58,7 +58,7 @@
             padding: var(--button-padding); /* Padding inside buttons */
             margin: 0 5px; /* Space between buttons */
             text-decoration: none; /* Remove underline from links */
-            font-size: var(--font-size); /* Font size for button text */
+            font-size: calc(var(--font-size) + 8px); /* Increased font size for button text */
             text-align: center; /* Center text inside buttons */
         }
 
@@ -73,6 +73,7 @@
             align-items: center; /* Center items horizontally */
             text-align: center; /* Center text inside sections */
             margin-top: var(--banner-height); /* Space from the banner */
+            margin-bottom: var(--section-gap); /* Reduced gap between sections */
         }
 
         .text-box {
@@ -103,18 +104,33 @@
         }
 
         .section h2 {
-            font-size: var(--heading-font-size); /* Font size for section headings */
+            font-size: calc(var(--heading-font-size) + 8px); /* Increased font size for section headings */
             margin: var(--title-margin-top) 0 10px 0; /* Margin above and below heading */
         }
 
         .section p {
-            font-size: var(--info-font-size); /* Font size for content text */
+            font-size: calc(var(--info-font-size) + 8px); /* Increased font size for content text */
         }
     </style>
+    <script>
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("sign-up-link").addEventListener("click", function(event) {
+                event.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="banner">
-        <a href="#sign-up">Sign Up</a>
+        <a id="sign-up-link" href="#sign-up">Sign Up</a>
         <a href="#information">Information</a>
         <a href="#class-schedule">Class Schedule</a>
         <a href="#homework">Homework</a>
@@ -125,7 +141,7 @@
         <h2>Sign Up</h2>
         <div class="text-box">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX6Tdlj-BQa7ga0TZbx9td_oiiYg7lcnP1QCUf8oo54YfNug/viewform?usp=sf_link" target="_blank">
-                Punjabi Class Registration Form
+                Punjabi Class Registration
             </a>
             <div class="additional-info">
                 Please use this form to register for 2024-2025 Punjabi Class. Annual tuition is $150 for each student; $100 siblings. Please make checks payable to CSMA; Please write Student Name in Memo Line of check.
