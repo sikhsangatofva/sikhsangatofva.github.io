@@ -14,15 +14,15 @@
             --font-type: Arial, sans-serif;
             --font-size: 24px; /* Font size for the buttons */
             --info-font-size: 24px; /* Font size for the additional information text */
-            --heading-font-size: 40px; /* Font size for section headings */
+            --heading-font-size: 32px; /* Font size for section headings */
             --box-width: 600px; /* Width for the text boxes */
             --box-height: auto; /* Height for the text boxes */
             --text-color: blue;
             --description-color: black; /* Color for the description text */
             --description-margin-top: 20px; /* Margin top for the description text */
-            --banner-height: 80px; /* Increased banner height */
-            --button-padding: 15px 25px; /* Increased padding for the buttons */
-            --section-gap: 300px; /* Gap between sections */
+            --banner-height: 80px; /* Height for the banner */
+            --button-padding: 10px 20px; /* Padding for the buttons */
+            --section-gap: 100px; /* Reduced gap between sections */
         }
 
         body, html {
@@ -44,7 +44,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 0 20px; /* Padding for better alignment */
+            padding: 0 10px; /* Padding for better alignment */
+            box-sizing: border-box; /* Include padding in width calculation */
         }
 
         .banner a {
@@ -52,8 +53,8 @@
             color: var(--button-text-color);
             border: 1px solid var(--button-border-color);
             border-radius: 5px;
-            padding: var(--button-padding); /* Increased padding for the buttons */
-            margin: 0 10px;
+            padding: var(--button-padding); /* Padding for the buttons */
+            margin: 0 5px; /* Reduced margin between buttons */
             text-decoration: none;
             font-size: var(--font-size); /* Font size for the banner buttons */
             text-align: center;
@@ -64,17 +65,17 @@
         }
 
         .section {
-            padding: var(--section-gap) 20px 20px; /* Space for banner and padding */
+            padding: 0 20px; /* Removed top and bottom padding */
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            min-height: calc(100vh - var(--banner-height)); /* Ensure the section takes at least the full viewport height minus the banner height */
+            margin-top: var(--banner-height); /* Ensure the section starts below the banner */
         }
 
         .section h2 {
             font-size: var(--heading-font-size); /* Font size for section headings */
-            margin: 0 0 20px 0; /* Margin below the heading */
+            margin: 0 0 10px 0; /* Margin below the heading */
         }
 
         .section p {
