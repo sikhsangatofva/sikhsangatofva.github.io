@@ -25,6 +25,7 @@
             --section-gap: 300px; /* Reduced gap between sections */
             --padding-top: 20px; /* Padding between the hyperlink and the banner */
             --title-margin-top: 20px; /* Margin top for section titles */
+            --section-padding-top: calc(var(--banner-height) + 20px); /* Padding to account for the banner height */
         }
 
         body, html {
@@ -67,12 +68,11 @@
         }
 
         .section {
-            padding: 0 20px; /* Padding around sections */
+            padding: var(--section-padding-top) 20px; /* Padding around sections */
             display: flex; /* Flexbox for alignment */
             flex-direction: column; /* Stack items vertically */
             align-items: center; /* Center items horizontally */
             text-align: center; /* Center text inside sections */
-            margin-top: var(--banner-height); /* Space from the banner */
             margin-bottom: var(--section-gap); /* Reduced gap between sections */
         }
 
